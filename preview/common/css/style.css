@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+canvas{
+    width: 100%;
+    min-height: 300px;
+}
