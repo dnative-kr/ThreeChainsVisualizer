@@ -880,7 +880,7 @@ class ChainRollupVisualizer {
                         // 새로운 텍스트 페이드 인 (A원에서만)
                         if ( node.chain === 'A') {
                             this.ctx.fillStyle = `rgba(40, 40, 40, ${fadeProgress})`;
-                            const text = `L2(N${node.number}) : L3(N${node.number}) : L3(N${node.number})`;
+                            const text = `L2(N${node.number}) : L1(N${node.number}) : L2(N${node.number})`;
                             this.ctx.fillText(text, textX + additionalOffsetX, textY + additionalOffsetY);
                         }
                     } else {
@@ -1135,9 +1135,9 @@ class ChainRollupVisualizer {
         
                 // 설명 텍스트 (위치 조정)
                 this.ctx.font = `${smallFontSize}px Times New Roman`;
-                this.ctx.fillText('Chain A', AX, centerY + verticalSpacing/2);
-                this.ctx.fillText('Chain B', BX, centerY + verticalSpacing/2);
-                this.ctx.fillText('Chain C', CX, centerY + verticalSpacing/2);
+                this.ctx.fillText('Layer 2', AX, centerY + verticalSpacing/2);
+                this.ctx.fillText('Layer 1', BX, centerY + verticalSpacing/2);
+                this.ctx.fillText('Layer 2', CX, centerY + verticalSpacing/2);
             } else {
                 // 기본 상태 텍스트 렌더링 (더 컴팩트하게)
                 this.ctx.font = `bold ${fontSize}px Times New Roman`;
@@ -1146,9 +1146,9 @@ class ChainRollupVisualizer {
                 this.ctx.fillText('C', this.chainC.x, this.chainC.y - verticalSpacing/2);
         
                 this.ctx.font = `${smallFontSize}px Times New Roman`;
-                this.ctx.fillText('Chain A', this.chainA.x, this.chainA.y + verticalSpacing/2);
-                this.ctx.fillText('Chain B', this.chainB.x, this.chainB.y + verticalSpacing/2);
-                this.ctx.fillText('Chain C', this.chainC.x, this.chainC.y + verticalSpacing/2);
+                this.ctx.fillText('Layer 2', this.chainA.x, this.chainA.y + verticalSpacing/2);
+                this.ctx.fillText('Layer 1', this.chainB.x, this.chainB.y + verticalSpacing/2);
+                this.ctx.fillText('Layer 2', this.chainC.x, this.chainC.y + verticalSpacing/2);
             }
         
         }
